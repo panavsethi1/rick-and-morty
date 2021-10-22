@@ -1,0 +1,120 @@
+.characters {
+  margin: 2rem auto;
+
+  &__heading {
+    & h1 {
+      color: $color-purple-dark;
+      text-align: center;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+
+    &__filter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+
+      & input {
+        outline: none;
+        border: none;
+        padding: 0.5rem;
+        width: 20rem;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+
+        &:focus {
+          outline: 2px solid $color-purple-light;
+        }
+      }
+    }
+  }
+
+  &__table {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+
+  &__paginator {
+    text-align: center;
+    margin-top: 1rem;
+
+    & p {
+      font-size: 2rem;
+      color: $color-purple;
+    }
+
+    & span {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      &:nth-child(odd) {
+        color: $color-purple-dark;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.character {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  border: 2px solid $color-purple-dark;
+  padding: 1rem;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+
+  & p {
+    color: $color-purple-dark;
+
+    & span {
+      color: $color-purple-light;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 150px;
+      margin-right: 1rem;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+    }
+  }
+
+  &__data {
+    &__name {
+      font-family: "Lobster", cursive;
+      font-size: 2.25em;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.home {
+  & h1 {
+    color: $color-purple-dark;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+    @include respond(sm) {
+      font-size: 1.5rem;
+    }
+
+    & span {
+      font-family: "Lobster", cursive;
+      display: block;
+      font-size: 5rem;
+      text-transform: none;
+      margin-bottom: 0.5rem;
+
+      @include respond(md) {
+        font-size: 4rem;
+      }
+
+      @include respond(sm) {
+        font-size: 3rem;
+      }
+    }
+  }
+}

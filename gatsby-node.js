@@ -1,7 +1,24 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require(`path`)
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { data } = await graphql(`
+    query allCharacters {
+      rickAndMorty {
+        characters {
+          results {
+            id
+            name
+          }
+        }
+      }
+    }
+  `)
+
+  data.rickAndMorty.characters.results.forEach(char => {
+    actions.createPage({
+      path: "/characters/" + char.name.toLowerCase().split(" ").join("-"),
+      component: path.resolve("./src/templates/character-details.js"),
+      context: { id: char.id },
+    })
+  })
+}

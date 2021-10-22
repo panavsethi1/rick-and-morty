@@ -1,0 +1,64 @@
+.character-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & h1 {
+    text-align: center;
+    margin: 2rem auto;
+    font-family: "Lobster", cursive;
+    color: $color-purple-dark;
+    font-size: 3rem;
+  }
+
+  &__content {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid $color-purple-dark;
+    margin: auto;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+
+    @include respond(sm) {
+      padding-bottom: 0;
+    }
+
+    &__image {
+      margin-right: 2rem;
+
+      & img {
+        width: 300px;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+      }
+    }
+
+    &__text {
+      & p {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $color-purple-dark;
+        margin-bottom: 1rem;
+
+        &:first-child {
+          margin-top: 1rem;
+        }
+
+        & span {
+          color: $color-purple;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
